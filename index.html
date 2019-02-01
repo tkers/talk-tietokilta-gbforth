@@ -754,7 +754,7 @@ hue-6-2: #c18401
     <section class="slide-content"><h3 id="game-boy-hardware">Game Boy hardware</h3>
 <ul>
 <li>8-bit CPU</li>
-<li>4 MHz (~1M instructions)</li>
+<li>4 MHz (~1MHz CPU clock)</li>
 <li>32kB ROM, 4kB RAM</li>
 <li>8 + 2 registers:
 <img src="imgs/registers.png" alt="registers"></li>
@@ -823,11 +823,12 @@ hue-6-2: #c18401
 <p>You can create new words</p>
 <pre><code>5 1 + .
 </code></pre><p>can be refactored into:</p>
-<pre><code>: INC
-  1 + ;
+<pre>
+<b>: INC</b>
+  1 + <b>;</b>
 
 5 INC .
-</code></pre></section>
+</pre></section>
   </div>
   <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="forth">Forth</h3>
@@ -922,12 +923,15 @@ $00 c, $00 c, $01 c, $33 c,
 <li><code>$04</code> is machine code for <code>INC-B</code></li>
 </ul>
 <h4 id="factor-out-operands-to-create-full-assembler">Factor out operands to create full assembler</h4>
-<pre><code>: A %00111000 ;
-: B %00000000 ;
+<pre>
+<b>: A</b> %00111000 <b>;</b>
+<b>: B</b> %00000000 <b>;</b>
 
-: INC,
-  %00000100 or c, ;
-</code></pre><ul>
+<b>: INC,</b>
+  %00000100 or c, <b>;</b>
+</pre>
+
+<ul>
 <li><code>A INC,</code> emits <code>$3c</code></li>
 </ul>
 </section>
@@ -950,7 +954,6 @@ di,
 $ffff # sp ld,
 
 %11100100 # a ld,
-
 a [rGBP] ld,
 
 0 # a ld,
@@ -972,7 +975,6 @@ di,
 $ffff # sp ld,
 
 %11100100 # a ld,
-
 a [rGBP] ld,
 
 <span style="color: #0000dd">reset-scroll</span>
@@ -981,15 +983,37 @@ a [rGBP] ld,
 </pre></section>
   </div>
   <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="macros-for-free-">Macros for free!</h3>
+<pre>
+<span style="color: #0000dd"><b>: reset-scroll</b>
+  0 # a ld,
+  a [rSCX] ld,
+  a [rSCY] ld, <b>;</b></span>
+
+<span style="color: #dd0000"><b>: reset-palette</b>
+  %11100100 # a ld,
+  a [rGBP] ld, <b>;</b></span>
+
+di,
+$ffff # sp ld,
+
+<span style="color: #dd0000">reset-palette</span>
+
+<span style="color: #0000dd">reset-scroll</span>
+
+<span style="color: #99bb99">( ... )</span>
+</pre></section>
+  </div>
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><p><img src="imgs/hellofosdem.png" alt="helloreaktor"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h1 id="next-steps">Next steps</h1>
 <h2 id="implementing-forth">Implementing Forth</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="implementing-forth">Implementing Forth</h3>
 <h4 id="the-easy-way-">The easy way:</h4>
 <ul>
@@ -1008,7 +1032,7 @@ a [rGBP] ld,
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="eventually-">Eventually...</h3>
 <ul>
 <li>Implement code primitives (ASM)</li>
@@ -1017,11 +1041,11 @@ a [rGBP] ld,
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><p><img src="imgs/forth.png" alt="forth"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h1 id="the-final-test-">The final test 💪</h1>
 <h2 id="compiling-a-third-party-forth-game-">Compiling a third party Forth game...</h2>
 <h2 id="">&nbsp;</h2>
@@ -1053,11 +1077,11 @@ Variable &gt;maze   <span class="hljs-number">0</span> &gt;maze !  \ current com
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><p><img src="imgs/soko.jpg" alt="soko"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="future-ideas-">Future ideas 🚀</h3>
 <ul>
 <li>ASM bug fixes</li>
@@ -1071,7 +1095,7 @@ Variable &gt;maze   <span class="hljs-number">0</span> &gt;maze !  \ current com
 <p><strong>Contributions welcome!</strong></p>
 </section>
   </div>
-  <div class="slide hidden  dark" id="slide-31">
+  <div class="slide hidden  dark" id="slide-32">
     <section class="slide-content"><h1 id="thank-you-">Thank you!</h1>
 <ul>
 <li><strong><a href="https://ams-hackers.github.io/gbforth">ams-hackers/gbforth</a></strong></li>
