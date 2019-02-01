@@ -119,12 +119,12 @@ You can create new words
 
 can be refactored into:
 
-```
-: INC
-  1 + ;
+<pre>
+<b>: INC</b>
+  1 + <b>;</b>
 
 5 INC .
-```
+</pre>
 
 --
 
@@ -227,13 +227,13 @@ $00 c, $00 c, $01 c, $33 c,
 
 #### Factor out operands to create full assembler
 
-```
-: A %00111000 ;
-: B %00000000 ;
+<pre>
+<b>: A</b> %00111000 <b>;</b>
+<b>: B</b> %00000000 <b>;</b>
 
-: INC,
-  %00000100 or c, ;
-```
+<b>: INC,</b>
+  %00000100 or c, <b>;</b>
+</pre>
 
 - `A INC,` emits `$3c`
 
@@ -255,7 +255,6 @@ di,
 $ffff # sp ld,
 
 %11100100 # a ld,
-
 a [rGBP] ld,
 
 0 # a ld,
@@ -279,7 +278,6 @@ di,
 $ffff # sp ld,
 
 %11100100 # a ld,
-
 a [rGBP] ld,
 
 <span style="color: #0000dd">reset-scroll</span>
