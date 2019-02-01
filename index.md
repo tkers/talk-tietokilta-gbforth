@@ -49,7 +49,7 @@ theme: tkers/cleaver-theme-dmg
 ### Game Boy hardware
 
 - 8-bit CPU
-- 4 MHz (~1M instructions)
+- 4 MHz (~1MHz CPU clock)
 - 32kB ROM, 4kB RAM
 - 8 + 2 registers:
   ![registers](imgs/registers.png)
