@@ -751,8 +751,9 @@ hue-6-2: #c18401
 <ul>
 <li>8-bit CPU</li>
 <li>4 MHz (~1M instructions)</li>
-<li>32kB ROM (of which 16 bankable)</li>
-<li>4kB RAM</li>
+<li>32kB ROM, 4kB RAM</li>
+<li>8 + 2 registers:
+<img src="imgs/registers.png" alt="registers"></li>
 </ul>
 </section>
   </div>
@@ -761,7 +762,17 @@ hue-6-2: #c18401
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h1 id="approaches-we-considered">Approaches we considered</h1>
+    <section class="slide-content"><h4 id="special-registers-ff00-ffff-">Special registers (<code>$FF00</code> - <code>$FFFF</code>)</h4>
+<ul>
+<li>Video memory (palette, tiles, scroll, background)</li>
+<li>Sound system (square1, square2, wave, noise)</li>
+<li>Input buttons</li>
+<li>Timers</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-8">
+    <section class="slide-content"><h3 id="how-do-we-start-">How do we start?</h3>
 <ul>
 <li>Keep reading the manual</li>
 <li>Start writing a compiler (somehow)</li>
@@ -774,8 +785,8 @@ hue-6-2: #c18401
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h1 id="our-approach-">Our approach ✨</h1>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h1 id="instead-">Instead ✨</h1>
 <ul>
 <li>Start with working game (example)</li>
 <li>Reverse-engineer binary</li>
@@ -788,7 +799,7 @@ hue-6-2: #c18401
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="forth">Forth</h3>
 <ul>
 <li>No syntax, just <strong>words</strong></li>
@@ -803,7 +814,7 @@ hue-6-2: #c18401
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="forth">Forth</h3>
 <p>You can create new words</p>
 <pre><code>5 1 + .
@@ -814,7 +825,7 @@ hue-6-2: #c18401
 5 INC .
 </code></pre></section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="forth">Forth</h3>
 <ul>
 <li>Simplest imaginable language</li>
@@ -826,15 +837,15 @@ hue-6-2: #c18401
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h1 id="starting-the-project">Starting the project</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-14">
     <section class="slide-content"><p><img src="imgs/helloworld.png" alt="helloworld"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="machine-code-rom-">Machine code (ROM)</h3>
 <pre><code>$00  $c3  $50  $01  $ce  $ed  $66  $66
 $cc  $0d  $00  $0b  $03  $73  $00  $83
@@ -848,7 +859,7 @@ $00  $00  $00  $00  $00  $00  $00  $00
 $00  $00  $01  $33
 </code></pre></section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="forth-program-that-emits-bytes">Forth program that emits bytes</h3>
 <pre>
 $00 <span style="color: #0000dd">c,</span> $c3 <span style="color: #0000dd">c,</span> $50 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $ce <span style="color: #0000dd">c,</span> $ed <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span>
@@ -863,7 +874,7 @@ $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</
 $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="find-the-patterns-and-meaning">Find the patterns and meaning</h3>
 <pre>
 $00 c, $c3 c, $50 c, $01 c, <span style="color: #0000dd">$ce c, $ed c, $66 c, $66 c,
@@ -878,7 +889,7 @@ $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c,</span>
 $00 c, $00 c, $01 c, $33 c,
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="extract-data-into-definitions">Extract data into definitions</h3>
 <pre>
 <span style="color: #0000dd"><b>: logo</b>
@@ -900,7 +911,7 @@ $00 c, $00 c, $01 c, $33 c,
 
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="decompiling-machine-code">Decompiling machine code</h3>
 <ul>
 <li><code>$3c</code> is machine code for <code>INC-A</code></li>
@@ -917,7 +928,7 @@ $00 c, $00 c, $01 c, $33 c,
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="complete-assembler">Complete assembler</h3>
 <ul>
 <li>Extend language with pattern matching<ul>
@@ -928,7 +939,7 @@ $00 c, $00 c, $01 c, $33 c,
 <p><img src="imgs/asm.png" alt="asm"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="translate-rom-to-assembler">Translate ROM to assembler</h3>
 <pre>
 di,
@@ -945,7 +956,7 @@ a [rSCY] ld,
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="macros-for-free-">Macros for free!</h3>
 <pre>
 <span style="color: #0000dd"><b>: reset-scroll</b>
@@ -965,16 +976,16 @@ a [rGBP] ld,
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><p><img src="imgs/hellofosdem.png" alt="helloreaktor"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h1 id="next-steps">Next steps</h1>
 <h2 id="implementing-forth">Implementing Forth</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="implementing-forth">Implementing Forth</h3>
 <h4 id="the-easy-way-">The easy way:</h4>
 <ul>
@@ -993,7 +1004,7 @@ a [rGBP] ld,
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="eventually-">Eventually...</h3>
 <ul>
 <li>Implement code primitives (ASM)</li>
@@ -1002,11 +1013,11 @@ a [rGBP] ld,
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><p><img src="imgs/forth.png" alt="forth"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h1 id="the-final-test-">The final test 💪</h1>
 <h2 id="compiling-a-third-party-forth-game-">Compiling a third party Forth game...</h2>
 <h2 id="">&nbsp;</h2>
@@ -1038,11 +1049,11 @@ Variable &gt;maze   <span class="hljs-number">0</span> &gt;maze !  \ current com
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><p><img src="imgs/soko.jpg" alt="soko"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="future-ideas-">Future ideas 🚀</h3>
 <ul>
 <li>ASM bug fixes</li>
@@ -1056,7 +1067,7 @@ Variable &gt;maze   <span class="hljs-number">0</span> &gt;maze !  \ current com
 <p><strong>Contributions welcome!</strong></p>
 </section>
   </div>
-  <div class="slide hidden  dark" id="slide-30">
+  <div class="slide hidden  dark" id="slide-31">
     <section class="slide-content"><h1 id="-more-">👾 More?</h1>
 <ul>
 <li><strong><a href="https://ams-hackers.github.io/gbforth">ams-hackers/gbforth</a></strong></li>

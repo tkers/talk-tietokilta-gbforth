@@ -46,8 +46,9 @@ theme: tkers/cleaver-theme-dmg
 
 - 8-bit CPU
 - 4 MHz (~1M instructions)
-- 32kB ROM (of which 16 bankable)
-- 4kB RAM
+- 32kB ROM, 4kB RAM
+- 8 + 2 registers:
+  ![registers](imgs/registers.png)
 
 --
 
@@ -55,7 +56,16 @@ theme: tkers/cleaver-theme-dmg
 
 --
 
-# Approaches we considered
+#### Special registers (`$FF00` - `$FFFF`)
+
+- Video memory (palette, tiles, scroll, background)
+- Sound system (square1, square2, wave, noise)
+- Input buttons
+- Timers
+
+--
+
+### How do we start?
 
 - Keep reading the manual
 - Start writing a compiler (somehow)
@@ -68,7 +78,7 @@ theme: tkers/cleaver-theme-dmg
 
 --
 
-# Our approach ✨
+# Instead ✨
 
 - Start with working game (example)
 - Reverse-engineer binary
