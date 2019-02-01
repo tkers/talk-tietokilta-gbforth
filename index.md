@@ -287,6 +287,30 @@ a [rGBP] ld,
 
 --
 
+### Macros for free!
+
+<pre>
+<span style="color: #0000dd"><b>: reset-scroll</b>
+  0 # a ld,
+  a [rSCX] ld,
+  a [rSCY] ld, <b>;</b></span>
+
+<span style="color: #dd0000"><b>: reset-palette</b>
+  %11100100 # a ld,
+  a [rGBP] ld, <b>;</b></span>
+
+di,
+$ffff # sp ld,
+
+<span style="color: #dd0000">reset-palette</span>
+
+<span style="color: #0000dd">reset-scroll</span>
+
+<span style="color: #99bb99">( ... )</span>
+</pre>
+
+--
+
 ![helloreaktor](imgs/hellofosdem.png)
 
 --
