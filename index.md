@@ -26,6 +26,10 @@ theme: tkers/cleaver-theme-dmg
 
 ### After-hours hacking
 
+- Founded _Amsterdam Hackers_
+
+#### First project:
+
 - Write an emulator?
 - ...a Game Boy game?
 - ...a **compiler**!
@@ -376,7 +380,7 @@ Variable >maze   0 >maze !  \ current compiled maze
 
 -- dark
 
-# 👾 More?
+# Thank you!
 
 - **[ams-hackers/gbforth](https://ams-hackers.github.io/gbforth)**
 - [The Ultimate Game Boy Talk (33c3)](https://www.youtube.com/watch?v=HyzD8pNlpwI)
