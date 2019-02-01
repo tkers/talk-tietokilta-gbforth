@@ -49,6 +49,8 @@ theme: tkers/cleaver-theme-dmg
 - 32kB ROM (of which 16 bankable)
 - 4kB RAM
 
+--
+
 ## ![draw](imgs/draw.png)
 
 --
@@ -59,9 +61,7 @@ theme: tkers/cleaver-theme-dmg
 - Start writing a compiler (somehow)
 - ...wait forever until you get something on the screen
 
---
-
-# However...
+#### However...
 
 - Not incremental
 - Long feedback cycle
@@ -81,69 +81,49 @@ theme: tkers/cleaver-theme-dmg
 
 ### Forth
 
-- Stack based
-- Concatenative
+- No syntax, just **words**
+- Using stack for arguments
 
-```fs
+```
+5 1 + .
+```
+
+- `5` push to stack
+- `1` push to stack
+- `+` pop 2 arguments and push sum
+- `.` pop 1 argument and print
+
+--
+
+### Forth
+
+You can create new words
+
+```
+5 1 + .
+```
+
+can be refactored into:
+
+```
 : INC
   1 + ;
-```
 
-Only **numbers** and **words**:
-
-```
-1   →   PUSH 1
-+   →   CALL +
+5 INC .
 ```
 
 --
 
-### Interpreter state
+### Forth
 
-![forth 1](imgs/forth-1.png)
-_`:` starts a new definition_
-
---
-
-### Create new definition
-
-![forth 2](imgs/forth-2.png)
-_read the name of the definition_
+- Simplest imaginable language
+- Concatenative
+  - _concatenation is composition_
+- Grow your own language
 
 --
 
-### Compiler State
-
-![forth 3](imgs/forth-3.png)
-_compile the body (1)_
-
---
-
-### Compiler State
-
-![forth 4](imgs/forth-4.png)
-_compile the body (2)_
-
---
-
-### End definition
-
-![forth 5](imgs/forth-5.png)
-_compile return_
-
---
-
-### Push a value
-
-![forth 6](imgs/forth-6.png)
-_push 5 on the stack_
-
---
-
-### Execute a defintition
-
-![forth 7](imgs/forth-7.png)
-_execute the body of `inc`_
+# Starting the project
 
 --
 
@@ -151,7 +131,7 @@ _execute the body of `inc`_
 
 --
 
-### Binary ROM
+### Machine code (ROM)
 
 ```
 $00  $c3  $50  $01  $ce  $ed  $66  $66
@@ -202,7 +182,7 @@ $00 c, $00 c, $01 c, $33 c,
 
 --
 
-### Extract patterns into definitions
+### Extract data into definitions
 
 <pre>
 <span style="color: #0000dd"><b>: logo</b>
@@ -226,19 +206,35 @@ $00 c, $00 c, $01 c, $33 c,
 
 --
 
-### Starting an Assembler
+### Decompiling machine code
 
-- How 0x33 can be extracted into INC-A
+- `$3c` is machine code for `INC-A`
+- `$04` is machine code for `INC-B`
+
+#### Factor out operands to create full assembler
+
+```
+: A %00111000 ;
+: B %00000000 ;
+
+: INC,
+  %00000100 or c, ;
+```
+
+- `A INC,` emits `$3c`
 
 --
 
-### Implement assembler
+### Complete assembler
+
+- Extend language with pattern matching
+  - Define `~~>` and `::`
 
 ![asm](imgs/asm.png)
 
 --
 
-### Full Forth Assembler
+### Translate ROM to assembler
 
 <pre>
 di,
@@ -257,19 +253,7 @@ a [rSCY] ld,
 
 --
 
-![helloworld](imgs/helloworld.png)
-
---
-
-![helloreaktor](imgs/helloreaktor.jpg)
-
---
-
-# Now what?
-
---
-
-### Simple Macros
+### Macros for free!
 
 <pre>
 <span style="color: #0000dd"><b>: reset-scroll</b>
@@ -291,29 +275,36 @@ a [rGBP] ld,
 
 --
 
-- Introduce stack to communicate between Macros
-- End up with Forth implementation
-- Primitives
+![helloreaktor](imgs/hellofosdem.png)
 
 --
 
-## Implementing Forth
+# Next steps
 
-- Break binary compatibility
-- New testing strategy
-  - Unit tests
-  - Visual comparison
-  - Using emulator for automated testing
-- Rewriting _Hello World_ to Forth
+## Implementing Forth
 
 --
 
 ### Implementing Forth
 
-- Add a compiler
-- Implement code primitives
-- Adding libraries
-- Replacing ASM with Forth
+#### The easy way:
+
+- Use ASM macros to define Forth primitives
+  - `dup`, `swap`, `+`...
+
+#### The hard way:
+
+- Create Intermediate Representation for definitions
+  - Lazy emitting
+  - Optimisations
+
+--
+
+### Eventually...
+
+- Implement code primitives (ASM)
+- Adding high level libraries (Forth)
+- Translating ROM to Forth
 
 --
 
@@ -357,28 +348,25 @@ Variable >maze   0 >maze !  \ current compiled maze
 
 --
 
-![tweet1](imgs/tweet1.png)
+![soko](imgs/soko.jpg)
 
 --
 
-![tweet2](imgs/tweet2.png)
-
---
-
-### Future development 🚀
+### Future ideas 🚀
 
 - ASM bug fixes
-- Compiler optimisations
+- Compiler optimisations: peephole, inlining
 - GB Color support
-- Declaritive RAM initialisation
+- Memory Bank Controllers
 - Automatic ROM bank switching
 - Debugging tools
-- **Actually writing a game**
-- ...
+- Tutorial: Write a game in Forth
+
+**Contributions welcome!**
 
 -- dark
 
-# 🤓 More?
+# 👾 More?
 
 - **[ams-hackers/gbforth](https://ams-hackers.github.io/gbforth)**
 - [The Ultimate Game Boy Talk (33c3)](https://www.youtube.com/watch?v=HyzD8pNlpwI)

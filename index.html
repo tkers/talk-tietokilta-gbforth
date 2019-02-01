@@ -356,16 +356,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400, 700, 300);
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono);
 
 body {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    background-color: #FFFFFF;
-    color: #081820;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  background-color: #ffffff;
+  color: #081820;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
 }
 
 .slide {
@@ -375,93 +375,110 @@ body {
   height: auto;
 }
 
-#slide-1 h1, .dark h1 {
+#slide-1 h1,
+.dark h1 {
   margin: 170px 0 0;
 }
 
 h1 {
-    font-size: 250%;
-    margin: auto;
+  font-size: 250%;
+  margin: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    letter-spacing: -0.5px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-h1, h2, h3 {
-    color: #346856;
+h1,
+h2,
+h3,
+h4 {
+  color: #346856;
 }
 
 h3 {
   border-bottom: 1px solid #346856;
 }
 
-h4, h5 {
-    color: #000000;
-    margin-bottom: 0;
+h4,
+h5 {
+  color: #000000;
+  margin-bottom: 0;
 }
 
 h6 {
-    margin-bottom: 0;
-    text-transform: uppercase;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
-h4 + p, h5 + p, h6 + p,
-h4 + ul, h5 + ul, h6 + ul {
-    margin-top: 0;
+h4 + p,
+h5 + p,
+h6 + p,
+h4 + ul,
+h5 + ul,
+h6 + ul {
+  margin-top: 0;
 }
 
 a {
-    color: #61C5AA;
-    text-decoration: underline;
+  color: #61c5aa;
+  text-decoration: underline;
 }
 
 a:hover {
-    color: #44b999;
-    text-decoration: none;
+  color: #44b999;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 ul > li {
-    margin: -0.2em 0;
+  margin: -0.2em 0;
 }
 ul > li:before {
-    content: "";
-    border-color: transparent #346856;
-    border-style: solid;
-    border-width: 0.2em 0 0.2em 0.3em;
-    display: block;
-    left: -0.6em;
-    top: 0.95em;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    height: 0px;
-    width: 0px;
+  content: "";
+  border-color: transparent #346856;
+  border-style: solid;
+  border-width: 0.2em 0 0.2em 0.3em;
+  display: block;
+  left: -0.6em;
+  top: 0.95em;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  height: 0px;
+  width: 0px;
 }
 
-li > ul, li > ol {
-    padding: 0 0 0 1.5em;
+li > ul,
+li > ol {
+  padding: 0 0 0 1.5em;
 }
 
 li > ul > li:before {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
-pre, code {
-  font-family: 'Fira Mono', monospace;
+pre,
+code {
+  font-family: "Fira Mono", monospace;
 }
 
-p > code, li > code {
-    background: #e0f8d0;
-    color: #346856;
-    padding: 0.1em 0.2em;
-    font-size: 80%;
-    vertical-align: middle;
-    border-radius: 4px;
+p > code,
+li > code {
+  background: #e0f8d0;
+  color: #346856;
+  padding: 0.1em 0.2em;
+  font-size: 80%;
+  vertical-align: middle;
+  border-radius: 4px;
 }
 
 pre {
@@ -476,50 +493,51 @@ pre {
   box-shadow: inset 0 1px 1px #88c070;
 }
 
-blockquote, img {
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+blockquote,
+img {
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 img + em {
-    display: block;
-    margin-top: 0.5em;
-    text-align: center;
-    font-size: 50%;
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+  font-size: 50%;
 }
 
 blockquote > p:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 blockquote > p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 blockquote {
-    padding: 1em;
-    border-left: 3px solid #88c070;
+  padding: 1em;
+  border-left: 3px solid #88c070;
 }
 
 img[alt="background"] {
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.05;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.05;
 }
 
 #slide-1 img[alt="background"] {
@@ -527,70 +545,73 @@ img[alt="background"] {
 }
 
 #slide-1 {
-    background-color: #88c070;
-    background-image: linear-gradient(120deg, #346856, #88c070);
-    color: #FFFFFF;
+  background-color: #88c070;
+  background-image: linear-gradient(120deg, #346856, #88c070);
+  color: #ffffff;
 }
-
 
 .slide.dark {
-    background-color: #081820;
-    color: #FFFFFF;
+  background-color: #081820;
+  color: #ffffff;
 }
 
-#slide-1 h1, #slide-1 h2,
-.slide.dark h1, .slide.dark h2 {
-    color: #FFFFFF;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
+#slide-1 h1,
+#slide-1 h2,
+.slide.dark h1,
+.slide.dark h2 {
+  color: #ffffff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
 }
 
-#slide-1 h2, .slide.dark h2 {
-    opacity: 0.75;
+#slide-1 h2,
+.slide.dark h2 {
+  opacity: 0.75;
 }
 
 .slide.dark ul > li:before {
-    border-color: transparent rgba(255,255,255,.6);
+  border-color: transparent rgba(255, 255, 255, 0.6);
 }
 
 .author-slide {
-    background-color: #737373;
+  background-color: #737373;
 }
 
 .author-slide h1 {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
-.author-slide, .slide.dark a {
-    color: #88c070;
-    position: relative;
-    z-index: 10;
+.author-slide,
+.slide.dark a {
+  color: #88c070;
+  position: relative;
+  z-index: 10;
 }
 
 .progress {
-    z-index: 100;
+  z-index: 100;
 }
 .progress-bar {
-    background-color: #88c070;
-    transition-duration: 0.25s;
+  background-color: #88c070;
+  transition-duration: 0.25s;
 }
 
 .numbers {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 150%;
-    background-color: #081820;
-    color: #FFFFFF;
-    opacity: 0.5;
-    padding: 0.2em 1em;
-    border-radius: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 150%;
+  background-color: #081820;
+  color: #ffffff;
+  opacity: 0.5;
+  padding: 0.2em 1em;
+  border-radius: 40px;
 }
 /* #slide-1 .numbers,
 .slide.dark .numbers, */
 .numbers:empty {
-    display: none;
+  display: none;
 }
 
 /*
@@ -733,20 +754,20 @@ hue-6-2: #c18401
 <li>32kB ROM (of which 16 bankable)</li>
 <li>4kB RAM</li>
 </ul>
-<h2 id="draw"><img src="imgs/draw.png" alt="draw"></h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
+    <section class="slide-content"><h2 id="draw"><img src="imgs/draw.png" alt="draw"></h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h1 id="approaches-we-considered">Approaches we considered</h1>
 <ul>
 <li>Keep reading the manual</li>
 <li>Start writing a compiler (somehow)</li>
 <li>...wait forever until you get something on the screen</li>
 </ul>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h1 id="however-">However...</h1>
+<h4 id="however-">However...</h4>
 <ul>
 <li>Not incremental</li>
 <li>Long feedback cycle</li>
@@ -770,65 +791,51 @@ hue-6-2: #c18401
   <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="forth">Forth</h3>
 <ul>
-<li>Stack based</li>
-<li>Concatenative</li>
+<li>No syntax, just <strong>words</strong></li>
+<li>Using stack for arguments</li>
 </ul>
-<pre><code class="lang-fs">: INC
-  <span class="hljs-number">1</span> + ;
-</code></pre>
-<p>Only <strong>numbers</strong> and <strong>words</strong>:</p>
-<pre><code>1   →   PUSH 1
-+   →   CALL +
-</code></pre></section>
-  </div>
-  <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h3 id="interpreter-state">Interpreter state</h3>
-<p><img src="imgs/forth-1.png" alt="forth 1">
-<em><code>:</code> starts a new definition</em></p>
+<pre><code>5 1 + .
+</code></pre><ul>
+<li><code>5</code> push to stack</li>
+<li><code>1</code> push to stack</li>
+<li><code>+</code> pop 2 arguments and push sum</li>
+<li><code>.</code> pop 1 argument and print</li>
+</ul>
 </section>
   </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h3 id="forth">Forth</h3>
+<p>You can create new words</p>
+<pre><code>5 1 + .
+</code></pre><p>can be refactored into:</p>
+<pre><code>: INC
+  1 + ;
+
+5 INC .
+</code></pre></section>
+  </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h3 id="create-new-definition">Create new definition</h3>
-<p><img src="imgs/forth-2.png" alt="forth 2">
-<em>read the name of the definition</em></p>
+    <section class="slide-content"><h3 id="forth">Forth</h3>
+<ul>
+<li>Simplest imaginable language</li>
+<li>Concatenative<ul>
+<li><em>concatenation is composition</em></li>
+</ul>
+</li>
+<li>Grow your own language</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h3 id="compiler-state">Compiler State</h3>
-<p><img src="imgs/forth-3.png" alt="forth 3">
-<em>compile the body (1)</em></p>
+    <section class="slide-content"><h1 id="starting-the-project">Starting the project</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h3 id="compiler-state">Compiler State</h3>
-<p><img src="imgs/forth-4.png" alt="forth 4">
-<em>compile the body (2)</em></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h3 id="end-definition">End definition</h3>
-<p><img src="imgs/forth-5.png" alt="forth 5">
-<em>compile return</em></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-15">
-    <section class="slide-content"><h3 id="push-a-value">Push a value</h3>
-<p><img src="imgs/forth-6.png" alt="forth 6">
-<em>push 5 on the stack</em></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-16">
-    <section class="slide-content"><h3 id="execute-a-defintition">Execute a defintition</h3>
-<p><img src="imgs/forth-7.png" alt="forth 7">
-<em>execute the body of <code>inc</code></em></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><p><img src="imgs/helloworld.png" alt="helloworld"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h3 id="binary-rom">Binary ROM</h3>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="machine-code-rom-">Machine code (ROM)</h3>
 <pre><code>$00  $c3  $50  $01  $ce  $ed  $66  $66
 $cc  $0d  $00  $0b  $03  $73  $00  $83
 $00  $0c  $00  $0d  $00  $08  $11  $1f
@@ -841,7 +848,7 @@ $00  $00  $00  $00  $00  $00  $00  $00
 $00  $00  $01  $33
 </code></pre></section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="forth-program-that-emits-bytes">Forth program that emits bytes</h3>
 <pre>
 $00 <span style="color: #0000dd">c,</span> $c3 <span style="color: #0000dd">c,</span> $50 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $ce <span style="color: #0000dd">c,</span> $ed <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span>
@@ -856,7 +863,7 @@ $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</
 $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="find-the-patterns-and-meaning">Find the patterns and meaning</h3>
 <pre>
 $00 c, $c3 c, $50 c, $01 c, <span style="color: #0000dd">$ce c, $ed c, $66 c, $66 c,
@@ -871,8 +878,8 @@ $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c,</span>
 $00 c, $00 c, $01 c, $33 c,
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-21">
-    <section class="slide-content"><h3 id="extract-patterns-into-definitions">Extract patterns into definitions</h3>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="extract-data-into-definitions">Extract data into definitions</h3>
 <pre>
 <span style="color: #0000dd"><b>: logo</b>
   $ce c, $ed c, $66 c, $66 c, $cc c, $0d c, $00 c, $0b c,
@@ -893,20 +900,36 @@ $00 c, $00 c, $01 c, $33 c,
 
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-22">
-    <section class="slide-content"><h3 id="starting-an-assembler">Starting an Assembler</h3>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="decompiling-machine-code">Decompiling machine code</h3>
 <ul>
-<li>How 0x33 can be extracted into INC-A</li>
+<li><code>$3c</code> is machine code for <code>INC-A</code></li>
+<li><code>$04</code> is machine code for <code>INC-B</code></li>
+</ul>
+<h4 id="factor-out-operands-to-create-full-assembler">Factor out operands to create full assembler</h4>
+<pre><code>: A %00111000 ;
+: B %00000000 ;
+
+: INC,
+  %00000100 or c, ;
+</code></pre><ul>
+<li><code>A INC,</code> emits <code>$3c</code></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
-    <section class="slide-content"><h3 id="implement-assembler">Implement assembler</h3>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="complete-assembler">Complete assembler</h3>
+<ul>
+<li>Extend language with pattern matching<ul>
+<li>Define <code>~~&gt;</code> and <code>::</code></li>
+</ul>
+</li>
+</ul>
 <p><img src="imgs/asm.png" alt="asm"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
-    <section class="slide-content"><h3 id="full-forth-assembler">Full Forth Assembler</h3>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="translate-rom-to-assembler">Translate ROM to assembler</h3>
 <pre>
 di,
 $ffff # sp ld,
@@ -922,20 +945,8 @@ a [rSCY] ld,
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><p><img src="imgs/helloworld.png" alt="helloworld"></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-26">
-    <section class="slide-content"><p><img src="imgs/helloreaktor.jpg" alt="helloreaktor"></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-27">
-    <section class="slide-content"><h1 id="now-what-">Now what?</h1>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-28">
-    <section class="slide-content"><h3 id="simple-macros">Simple Macros</h3>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h3 id="macros-for-free-">Macros for free!</h3>
 <pre>
 <span style="color: #0000dd"><b>: reset-scroll</b>
   0 # a ld,
@@ -954,43 +965,48 @@ a [rGBP] ld,
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
   </div>
-  <div class="slide hidden" id="slide-29">
-    <section class="slide-content"><ul>
-<li>Introduce stack to communicate between Macros</li>
-<li>End up with Forth implementation</li>
-<li>Primitives</li>
-</ul>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><p><img src="imgs/hellofosdem.png" alt="helloreaktor"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
-    <section class="slide-content"><h2 id="implementing-forth">Implementing Forth</h2>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h1 id="next-steps">Next steps</h1>
+<h2 id="implementing-forth">Implementing Forth</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="implementing-forth">Implementing Forth</h3>
+<h4 id="the-easy-way-">The easy way:</h4>
 <ul>
-<li>Break binary compatibility</li>
-<li>New testing strategy<ul>
-<li>Unit tests</li>
-<li>Visual comparison</li>
-<li>Using emulator for automated testing</li>
+<li>Use ASM macros to define Forth primitives<ul>
+<li><code>dup</code>, <code>swap</code>, <code>+</code>...</li>
 </ul>
 </li>
-<li>Rewriting <em>Hello World</em> to Forth</li>
 </ul>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-31">
-    <section class="slide-content"><h3 id="implementing-forth">Implementing Forth</h3>
+<h4 id="the-hard-way-">The hard way:</h4>
 <ul>
-<li>Add a compiler</li>
-<li>Implement code primitives</li>
-<li>Adding libraries</li>
-<li>Replacing ASM with Forth</li>
+<li>Create Intermediate Representation for definitions<ul>
+<li>Lazy emitting</li>
+<li>Optimisations</li>
+</ul>
+</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="eventually-">Eventually...</h3>
+<ul>
+<li>Implement code primitives (ASM)</li>
+<li>Adding high level libraries (Forth)</li>
+<li>Translating ROM to Forth</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><p><img src="imgs/forth.png" alt="forth"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h1 id="the-final-test-">The final test 💪</h1>
 <h2 id="compiling-a-third-party-forth-game-">Compiling a third party Forth game...</h2>
 <h2 id="">&nbsp;</h2>
@@ -1022,30 +1038,26 @@ Variable &gt;maze   <span class="hljs-number">0</span> &gt;maze !  \ current com
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
-    <section class="slide-content"><p><img src="imgs/tweet1.png" alt="tweet1"></p>
+  <div class="slide hidden" id="slide-28">
+    <section class="slide-content"><p><img src="imgs/soko.jpg" alt="soko"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
-    <section class="slide-content"><p><img src="imgs/tweet2.png" alt="tweet2"></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-36">
-    <section class="slide-content"><h3 id="future-development-">Future development 🚀</h3>
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h3 id="future-ideas-">Future ideas 🚀</h3>
 <ul>
 <li>ASM bug fixes</li>
-<li>Compiler optimisations</li>
+<li>Compiler optimisations: peephole, inlining</li>
 <li>GB Color support</li>
-<li>Declaritive RAM initialisation</li>
+<li>Memory Bank Controllers</li>
 <li>Automatic ROM bank switching</li>
 <li>Debugging tools</li>
-<li><strong>Actually writing a game</strong></li>
-<li>...</li>
+<li>Tutorial: Write a game in Forth</li>
 </ul>
+<p><strong>Contributions welcome!</strong></p>
 </section>
   </div>
-  <div class="slide hidden  dark" id="slide-37">
-    <section class="slide-content"><h1 id="-more-">🤓 More?</h1>
+  <div class="slide hidden  dark" id="slide-30">
+    <section class="slide-content"><h1 id="-more-">👾 More?</h1>
 <ul>
 <li><strong><a href="https://ams-hackers.github.io/gbforth">ams-hackers/gbforth</a></strong></li>
 <li><a href="https://www.youtube.com/watch?v=HyzD8pNlpwI">The Ultimate Game Boy Talk (33c3)</a></li>
