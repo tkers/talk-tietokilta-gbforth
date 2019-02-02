@@ -348,6 +348,13 @@ $ffff # sp ld,
 
 --
 
+### Limitations
+
+- No **run-time** on Game Boy
+- Division between **ROM** and **RAM**
+
+--
+
 # The final test 💪
 
 ## Compiling a third party Forth game...
