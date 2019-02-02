@@ -62,8 +62,8 @@ theme: tkers/cleaver-theme-dmg
 
 #### Special registers (`$FF00` - `$FFFF`)
 
-- Video memory (palette, tiles, scroll, background)
-- Sound system (square1, square2, wave, noise)
+- Video subsystem (palette, tiles, scroll, background)
+- Sound subsystem (square1, square2, wave, noise)
 - Input buttons
 - Timers
 
