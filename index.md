@@ -311,7 +311,7 @@ $ffff # sp ld,
 
 --
 
-![helloreaktor](imgs/hellofosdem.png)
+![hello tietokilta](imgs/hellotietokilta.png)
 
 --
 
