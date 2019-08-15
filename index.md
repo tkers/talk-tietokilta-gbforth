@@ -2,7 +2,7 @@ title: "GBForth"
 controls: false
 progress: true
 numbers: true
-theme: tkers/cleaver-theme-dmg
+theme: tkers/cleaver-theme-sunset
 
 --
 
@@ -125,8 +125,8 @@ You can create new words
 can be refactored into:
 
 <pre>
-<b>: INC</b>
-  1 + <b>;</b>
+<b style="color: #ffffff">: INC</b>
+  1 + <b style="color: #ffffff">;</b>
 
 5 INC .
 </pre>
@@ -170,16 +170,16 @@ $00  $00  $01  $33
 ### Forth program that emits bytes
 
 <pre>
-$00 <span style="color: #0000dd">c,</span> $c3 <span style="color: #0000dd">c,</span> $50 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $ce <span style="color: #0000dd">c,</span> $ed <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span>
-$cc <span style="color: #0000dd">c,</span> $0d <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0b <span style="color: #0000dd">c,</span> $03 <span style="color: #0000dd">c,</span> $73 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $83 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $0c <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0d <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $08 <span style="color: #0000dd">c,</span> $11 <span style="color: #0000dd">c,</span> $1f <span style="color: #0000dd">c,</span>
-$88 <span style="color: #0000dd">c,</span> $89 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0e <span style="color: #0000dd">c,</span> $dc <span style="color: #0000dd">c,</span> $cc <span style="color: #0000dd">c,</span> $6e <span style="color: #0000dd">c,</span> $e6 <span style="color: #0000dd">c,</span>
-$dd <span style="color: #0000dd">c,</span> $dd <span style="color: #0000dd">c,</span> $d9 <span style="color: #0000dd">c,</span> $99 <span style="color: #0000dd">c,</span> $bb <span style="color: #0000dd">c,</span> $bb <span style="color: #0000dd">c,</span> $67 <span style="color: #0000dd">c,</span> $63 <span style="color: #0000dd">c,</span>
-$6e <span style="color: #0000dd">c,</span> $0e <span style="color: #0000dd">c,</span> $ec <span style="color: #0000dd">c,</span> $cc <span style="color: #0000dd">c,</span> $dd <span style="color: #0000dd">c,</span> $dc <span style="color: #0000dd">c,</span> $99 <span style="color: #0000dd">c,</span> $9f <span style="color: #0000dd">c,</span>
-$bb <span style="color: #0000dd">c,</span> $b9 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span> $3e <span style="color: #0000dd">c,</span> $45 <span style="color: #0000dd">c,</span> $58 <span style="color: #0000dd">c,</span> $41 <span style="color: #0000dd">c,</span> $4d <span style="color: #0000dd">c,</span>
-$50 <span style="color: #0000dd">c,</span> $4c <span style="color: #0000dd">c,</span> $45 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span>
+$00 <span style="color: #61aeee">c,</span> $c3 <span style="color: #61aeee">c,</span> $50 <span style="color: #61aeee">c,</span> $01 <span style="color: #61aeee">c,</span> $ce <span style="color: #61aeee">c,</span> $ed <span style="color: #61aeee">c,</span> $66 <span style="color: #61aeee">c,</span> $66 <span style="color: #61aeee">c,</span>
+$cc <span style="color: #61aeee">c,</span> $0d <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0b <span style="color: #61aeee">c,</span> $03 <span style="color: #61aeee">c,</span> $73 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $83 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $0c <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0d <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $08 <span style="color: #61aeee">c,</span> $11 <span style="color: #61aeee">c,</span> $1f <span style="color: #61aeee">c,</span>
+$88 <span style="color: #61aeee">c,</span> $89 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0e <span style="color: #61aeee">c,</span> $dc <span style="color: #61aeee">c,</span> $cc <span style="color: #61aeee">c,</span> $6e <span style="color: #61aeee">c,</span> $e6 <span style="color: #61aeee">c,</span>
+$dd <span style="color: #61aeee">c,</span> $dd <span style="color: #61aeee">c,</span> $d9 <span style="color: #61aeee">c,</span> $99 <span style="color: #61aeee">c,</span> $bb <span style="color: #61aeee">c,</span> $bb <span style="color: #61aeee">c,</span> $67 <span style="color: #61aeee">c,</span> $63 <span style="color: #61aeee">c,</span>
+$6e <span style="color: #61aeee">c,</span> $0e <span style="color: #61aeee">c,</span> $ec <span style="color: #61aeee">c,</span> $cc <span style="color: #61aeee">c,</span> $dd <span style="color: #61aeee">c,</span> $dc <span style="color: #61aeee">c,</span> $99 <span style="color: #61aeee">c,</span> $9f <span style="color: #61aeee">c,</span>
+$bb <span style="color: #61aeee">c,</span> $b9 <span style="color: #61aeee">c,</span> $33 <span style="color: #61aeee">c,</span> $3e <span style="color: #61aeee">c,</span> $45 <span style="color: #61aeee">c,</span> $58 <span style="color: #61aeee">c,</span> $41 <span style="color: #61aeee">c,</span> $4d <span style="color: #61aeee">c,</span>
+$50 <span style="color: #61aeee">c,</span> $4c <span style="color: #61aeee">c,</span> $45 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $01 <span style="color: #61aeee">c,</span> $33 <span style="color: #61aeee">c,</span>
 </pre>
 
 --
@@ -187,13 +187,13 @@ $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</
 ### Find the patterns and meaning
 
 <pre>
-$00 c, $c3 c, $50 c, $01 c, <span style="color: #0000dd">$ce c, $ed c, $66 c, $66 c,
+$00 c, $c3 c, $50 c, $01 c, <span style="color: #61aeee">$ce c, $ed c, $66 c, $66 c,
 $cc c, $0d c, $00 c, $0b c, $03 c, $73 c, $00 c, $83 c,
 $00 c, $0c c, $00 c, $0d c, $00 c, $08 c, $11 c, $1f c,
 $88 c, $89 c, $00 c, $0e c, $dc c, $cc c, $6e c, $e6 c,
 $dd c, $dd c, $d9 c, $99 c, $bb c, $bb c, $67 c, $63 c,
 $6e c, $0e c, $ec c, $cc c, $dd c, $dc c, $99 c, $9f c,
-$bb c, $b9 c, $33 c, $3e c,</span> <span style="color: #dd0000">$45 c, $58 c, $41 c, $4d c,
+$bb c, $b9 c, $33 c, $3e c,</span> <span style="color: #e6c07b">$45 c, $58 c, $41 c, $4d c,
 $50 c, $4c c, $45 c, $00 c, $00 c, $00 c, $00 c, $00 c,
 $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c,</span>
 $00 c, $00 c, $01 c, $33 c,
@@ -204,7 +204,7 @@ $00 c, $00 c, $01 c, $33 c,
 ### Extract data into definitions
 
 <pre>
-<span style="color: #0000dd"><b>: logo</b>
+<span style="color: #61aeee"><b>: logo</b>
   $ce c, $ed c, $66 c, $66 c, $cc c, $0d c, $00 c, $0b c,
   $03 c, $73 c, $00 c, $83 c, $00 c, $0c c, $00 c, $0d c,
   $00 c, $08 c, $11 c, $1f c, $88 c, $89 c, $00 c, $0e c,
@@ -212,13 +212,13 @@ $00 c, $00 c, $01 c, $33 c,
   $bb c, $bb c, $67 c, $63 c, $6e c, $0e c, $ec c, $cc c,
   $dd c, $dc c, $99 c, $9f c, $bb c, $b9 c, $33 c, $3e c, <b>;</b></span>
 
-<span style="color: #dd0000"><b>: title</b>
+<span style="color: #e6c07b"><b>: title</b>
   $45 c, $58 c, $41 c, $4d c, $50 c, $4c c, $45 c, $00 c,
   $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, <b>;</b></span>
 
 $00 c, $c3 c, $50 c, $01 c,
-<span style="color: #0000dd">logo</span>
-<span style="color: #dd0000">title</span>
+<span style="color: #61aeee">logo</span>
+<span style="color: #e6c07b">title</span>
 $00 c, $00 c, $01 c, $33 c,
 
 </pre>
@@ -233,8 +233,8 @@ $00 c, $00 c, $01 c, $33 c,
 #### Create more words!
 
 <pre>
-<b>: INC-A,</b> $3c c, <b>;</b>
-<b>: INC-B,</B> $04 c, <b>;</b>
+<b style="color: #ffffff">: INC-A,</b> $3c c, <b style="color: #ffffff">;</b>
+<b style="color: #ffffff">: INC-B,</B> $04 c, <b style="color: #ffffff">;</b>
 </pre>
 
 --
@@ -247,8 +247,8 @@ $00 c, $00 c, $01 c, $33 c,
 #### Discover a pattern?
 
 <pre>
-: INC-A, %00<b>111</b>100 c, ;
-: INC-B,</B> %00<b>000</b>100 c, ;
+: INC-A, %00<b style="color: #ffffff">111</b>100 c, ;
+: INC-B,</B> %00<b style="color: #ffffff">000</b>100 c, ;
 </pre>
 
 --
@@ -261,11 +261,11 @@ $00 c, $00 c, $01 c, $33 c,
 #### Factor out operands to create full assembler
 
 <pre>
-<b>: A</b> %00111000 <b>;</b>
-<b>: B</b> %00000000 <b>;</b>
+<b style="color: #ffffff">: A</b> %00111000 <b style="color: #ffffff">;</b>
+<b style="color: #ffffff">: B</b> %00000000 <b style="color: #ffffff">;</b>
 
-<b>: INC,</b>
-  %00000100 or c, <b>;</b>
+<b style="color: #ffffff">: INC,</b>
+  %00000100 or c, <b style="color: #ffffff">;</b>
 </pre>
 
 - `A INC,` emits `$3c`
@@ -302,7 +302,7 @@ a [rSCY] ld,
 ### Macros for free!
 
 <pre>
-<span style="color: #0000dd"><b>: reset-scroll</b>
+<span style="color: #61aeee"><b>: reset-scroll</b>
   0 # a ld,
   a [rSCX] ld,
   a [rSCY] ld, <b>;</b></span>
@@ -313,7 +313,7 @@ $ffff # sp ld,
 %11100100 # a ld,
 a [rGBP] ld,
 
-<span style="color: #0000dd">reset-scroll</span>
+<span style="color: #61aeee">reset-scroll</span>
 
 <span style="color: #99bb99">( ... )</span>
 </pre>
@@ -323,21 +323,21 @@ a [rGBP] ld,
 ### Macros for free!
 
 <pre>
-<span style="color: #0000dd"><b>: reset-scroll</b>
+<span style="color: #61aeee"><b>: reset-scroll</b>
   0 # a ld,
   a [rSCX] ld,
   a [rSCY] ld, <b>;</b></span>
 
-<span style="color: #dd0000"><b>: reset-palette</b>
+<span style="color: #e6c07b"><b>: reset-palette</b>
   %11100100 # a ld,
   a [rGBP] ld, <b>;</b></span>
 
 di,
 $ffff # sp ld,
 
-<span style="color: #dd0000">reset-palette</span>
+<span style="color: #e6c07b">reset-palette</span>
 
-<span style="color: #0000dd">reset-scroll</span>
+<span style="color: #61aeee">reset-scroll</span>
 
 <span style="color: #99bb99">( ... )</span>
 </pre>

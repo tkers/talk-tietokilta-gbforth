@@ -363,7 +363,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   background-color: #ffffff;
-  color: #081820;
+  color: #242731;
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
 }
@@ -397,13 +397,12 @@ h6 {
 
 h1,
 h2,
-h3,
-h4 {
-  color: #346856;
+h3 {
+  color: #ff5544;
 }
 
 h3 {
-  border-bottom: 1px solid #346856;
+  border-bottom: 1px solid rgba(36, 39, 49, 0.4);
 }
 
 h4,
@@ -427,24 +426,26 @@ h6 + ul {
 }
 
 a {
-  color: #61c5aa;
+  color: #000000;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #44b999;
+  color: #000000;
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+  padding: 20px 0 20px 60px;
+  text-align: left;
 }
 ul > li {
   margin: -0.2em 0;
 }
 ul > li:before {
   content: "";
-  border-color: transparent #346856;
+  border-color: transparent rgba(36, 39, 49, 0.4);
   border-style: solid;
   border-width: 0.2em 0 0.2em 0.3em;
   display: block;
@@ -473,24 +474,24 @@ code {
 
 p > code,
 li > code {
-  background: #e0f8d0;
-  color: #346856;
-  padding: 0.1em 0.2em;
-  font-size: 80%;
+  background: #282c34;
+  color: #c8cdd5;
+  padding: 0.2em 0.5em;
+  font-size: 60%;
   vertical-align: middle;
-  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 pre {
   font-size: 60%;
-  background: #e0f8d0;
-  color: #346856;
-  border-radius: 2px;
+  background: #282c34;
+  color: #abb2bf;
+  border-radius: 0px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding: 1em;
   line-height: 1.3;
-  box-shadow: inset 0 1px 1px #88c070;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 blockquote,
@@ -500,6 +501,7 @@ img {
 }
 
 img {
+  padding: 0.5em;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -523,7 +525,7 @@ blockquote > p:last-child {
 
 blockquote {
   padding: 1em;
-  border-left: 3px solid #88c070;
+  border-left: 3px solid #ff5544;
 }
 
 img[alt="background"] {
@@ -545,13 +547,17 @@ img[alt="background"] {
 }
 
 #slide-1 {
-  background-color: #88c070;
-  background-image: linear-gradient(120deg, #346856, #88c070);
+  background-color: #ff5544;
   color: #ffffff;
 }
 
+#slide-1,
+.slide.center {
+  text-align: center;
+}
+
 .slide.dark {
-  background-color: #081820;
+  background-color: #222222;
   color: #ffffff;
 }
 
@@ -570,6 +576,27 @@ img[alt="background"] {
   opacity: 0.75;
 }
 
+#slide-1 h3 {
+  display: inline-block;
+  border: 0;
+  font-size: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  padding: 0.2em 1em;
+  border-radius: 40px;
+  margin-top: 60px;
+}
+
+#slide-1 a {
+  position: relative;
+  z-index: 10;
+}
+
+#slide-1 h3 a,
+#slide-1 h3 a:hover {
+  color: #ffffff;
+}
+
 .slide.dark ul > li:before {
   border-color: transparent rgba(255, 255, 255, 0.6);
 }
@@ -584,7 +611,7 @@ img[alt="background"] {
 
 .author-slide,
 .slide.dark a {
-  color: #88c070;
+  color: #ff5544;
   position: relative;
   z-index: 10;
 }
@@ -593,7 +620,7 @@ img[alt="background"] {
   z-index: 100;
 }
 .progress-bar {
-  background-color: #88c070;
+  background-color: #ff5544;
   transition-duration: 0.25s;
 }
 
@@ -602,9 +629,8 @@ img[alt="background"] {
   bottom: 20px;
   right: 20px;
   font-size: 150%;
-  background-color: #081820;
+  background-color: rgba(0, 0, 0, 0.4);
   color: #ffffff;
-  opacity: 0.5;
   padding: 0.2em 1em;
   border-radius: 40px;
 }
@@ -615,39 +641,40 @@ img[alt="background"] {
 }
 
 /*
-Atom One Light by Daniel Gamage
-Original One Light Syntax theme from https://github.com/atom/one-light-syntax
-base:    #fafafa
-mono-1:  #383a42
-mono-2:  #686b77
-mono-3:  #a0a1a7
-hue-1:   #0184bb
-hue-2:   #4078f2
-hue-3:   #a626a4
-hue-4:   #50a14f
-hue-5:   #e45649
-hue-5-2: #c91243
-hue-6:   #986801
-hue-6-2: #c18401
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
 */
+
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #383a42;
-  background: inherit;
+  color: #abb2bf;
+  background: #282c34;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #a0a1a7;
+  color: #5c6370;
   font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #a626a4;
+  color: #c678dd;
 }
 
 .hljs-section,
@@ -655,11 +682,11 @@ hue-6-2: #c18401
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e45649;
+  color: #e06c75;
 }
 
 .hljs-literal {
-  color: #0184bb;
+  color: #56b6c2;
 }
 
 .hljs-string,
@@ -667,12 +694,20 @@ hue-6-2: #c18401
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #50a14f;
+  color: #98c379;
+}
+
+.hljs-addition {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.hljs-deletion {
+  background: rgba(255, 0, 0, 0.1);
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #c18401;
+  color: #e6c07b;
 }
 
 .hljs-attr,
@@ -683,7 +718,7 @@ hue-6-2: #c18401
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #986801;
+  color: #d19a66;
 }
 
 .hljs-symbol,
@@ -692,7 +727,7 @@ hue-6-2: #c18401
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #4078f2;
+  color: #61aeee;
 }
 
 .hljs-emphasis {
@@ -829,8 +864,8 @@ hue-6-2: #c18401
 <pre><code>5 1 + .
 </code></pre><p>can be refactored into:</p>
 <pre>
-<b>: INC</b>
-  1 + <b>;</b>
+<b style="color: #ffffff">: INC</b>
+  1 + <b style="color: #ffffff">;</b>
 
 5 INC .
 </pre></section>
@@ -872,28 +907,28 @@ $00  $00  $01  $33
   <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="forth-program-that-emits-bytes">Forth program that emits bytes</h3>
 <pre>
-$00 <span style="color: #0000dd">c,</span> $c3 <span style="color: #0000dd">c,</span> $50 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $ce <span style="color: #0000dd">c,</span> $ed <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span> $66 <span style="color: #0000dd">c,</span>
-$cc <span style="color: #0000dd">c,</span> $0d <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0b <span style="color: #0000dd">c,</span> $03 <span style="color: #0000dd">c,</span> $73 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $83 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $0c <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0d <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $08 <span style="color: #0000dd">c,</span> $11 <span style="color: #0000dd">c,</span> $1f <span style="color: #0000dd">c,</span>
-$88 <span style="color: #0000dd">c,</span> $89 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $0e <span style="color: #0000dd">c,</span> $dc <span style="color: #0000dd">c,</span> $cc <span style="color: #0000dd">c,</span> $6e <span style="color: #0000dd">c,</span> $e6 <span style="color: #0000dd">c,</span>
-$dd <span style="color: #0000dd">c,</span> $dd <span style="color: #0000dd">c,</span> $d9 <span style="color: #0000dd">c,</span> $99 <span style="color: #0000dd">c,</span> $bb <span style="color: #0000dd">c,</span> $bb <span style="color: #0000dd">c,</span> $67 <span style="color: #0000dd">c,</span> $63 <span style="color: #0000dd">c,</span>
-$6e <span style="color: #0000dd">c,</span> $0e <span style="color: #0000dd">c,</span> $ec <span style="color: #0000dd">c,</span> $cc <span style="color: #0000dd">c,</span> $dd <span style="color: #0000dd">c,</span> $dc <span style="color: #0000dd">c,</span> $99 <span style="color: #0000dd">c,</span> $9f <span style="color: #0000dd">c,</span>
-$bb <span style="color: #0000dd">c,</span> $b9 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span> $3e <span style="color: #0000dd">c,</span> $45 <span style="color: #0000dd">c,</span> $58 <span style="color: #0000dd">c,</span> $41 <span style="color: #0000dd">c,</span> $4d <span style="color: #0000dd">c,</span>
-$50 <span style="color: #0000dd">c,</span> $4c <span style="color: #0000dd">c,</span> $45 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span>
-$00 <span style="color: #0000dd">c,</span> $00 <span style="color: #0000dd">c,</span> $01 <span style="color: #0000dd">c,</span> $33 <span style="color: #0000dd">c,</span>
+$00 <span style="color: #61aeee">c,</span> $c3 <span style="color: #61aeee">c,</span> $50 <span style="color: #61aeee">c,</span> $01 <span style="color: #61aeee">c,</span> $ce <span style="color: #61aeee">c,</span> $ed <span style="color: #61aeee">c,</span> $66 <span style="color: #61aeee">c,</span> $66 <span style="color: #61aeee">c,</span>
+$cc <span style="color: #61aeee">c,</span> $0d <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0b <span style="color: #61aeee">c,</span> $03 <span style="color: #61aeee">c,</span> $73 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $83 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $0c <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0d <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $08 <span style="color: #61aeee">c,</span> $11 <span style="color: #61aeee">c,</span> $1f <span style="color: #61aeee">c,</span>
+$88 <span style="color: #61aeee">c,</span> $89 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $0e <span style="color: #61aeee">c,</span> $dc <span style="color: #61aeee">c,</span> $cc <span style="color: #61aeee">c,</span> $6e <span style="color: #61aeee">c,</span> $e6 <span style="color: #61aeee">c,</span>
+$dd <span style="color: #61aeee">c,</span> $dd <span style="color: #61aeee">c,</span> $d9 <span style="color: #61aeee">c,</span> $99 <span style="color: #61aeee">c,</span> $bb <span style="color: #61aeee">c,</span> $bb <span style="color: #61aeee">c,</span> $67 <span style="color: #61aeee">c,</span> $63 <span style="color: #61aeee">c,</span>
+$6e <span style="color: #61aeee">c,</span> $0e <span style="color: #61aeee">c,</span> $ec <span style="color: #61aeee">c,</span> $cc <span style="color: #61aeee">c,</span> $dd <span style="color: #61aeee">c,</span> $dc <span style="color: #61aeee">c,</span> $99 <span style="color: #61aeee">c,</span> $9f <span style="color: #61aeee">c,</span>
+$bb <span style="color: #61aeee">c,</span> $b9 <span style="color: #61aeee">c,</span> $33 <span style="color: #61aeee">c,</span> $3e <span style="color: #61aeee">c,</span> $45 <span style="color: #61aeee">c,</span> $58 <span style="color: #61aeee">c,</span> $41 <span style="color: #61aeee">c,</span> $4d <span style="color: #61aeee">c,</span>
+$50 <span style="color: #61aeee">c,</span> $4c <span style="color: #61aeee">c,</span> $45 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span>
+$00 <span style="color: #61aeee">c,</span> $00 <span style="color: #61aeee">c,</span> $01 <span style="color: #61aeee">c,</span> $33 <span style="color: #61aeee">c,</span>
 </pre></section>
   </div>
   <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="find-the-patterns-and-meaning">Find the patterns and meaning</h3>
 <pre>
-$00 c, $c3 c, $50 c, $01 c, <span style="color: #0000dd">$ce c, $ed c, $66 c, $66 c,
+$00 c, $c3 c, $50 c, $01 c, <span style="color: #61aeee">$ce c, $ed c, $66 c, $66 c,
 $cc c, $0d c, $00 c, $0b c, $03 c, $73 c, $00 c, $83 c,
 $00 c, $0c c, $00 c, $0d c, $00 c, $08 c, $11 c, $1f c,
 $88 c, $89 c, $00 c, $0e c, $dc c, $cc c, $6e c, $e6 c,
 $dd c, $dd c, $d9 c, $99 c, $bb c, $bb c, $67 c, $63 c,
 $6e c, $0e c, $ec c, $cc c, $dd c, $dc c, $99 c, $9f c,
-$bb c, $b9 c, $33 c, $3e c,</span> <span style="color: #dd0000">$45 c, $58 c, $41 c, $4d c,
+$bb c, $b9 c, $33 c, $3e c,</span> <span style="color: #e6c07b">$45 c, $58 c, $41 c, $4d c,
 $50 c, $4c c, $45 c, $00 c, $00 c, $00 c, $00 c, $00 c,
 $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c,</span>
 $00 c, $00 c, $01 c, $33 c,
@@ -902,7 +937,7 @@ $00 c, $00 c, $01 c, $33 c,
   <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="extract-data-into-definitions">Extract data into definitions</h3>
 <pre>
-<span style="color: #0000dd"><b>: logo</b>
+<span style="color: #61aeee"><b>: logo</b>
   $ce c, $ed c, $66 c, $66 c, $cc c, $0d c, $00 c, $0b c,
   $03 c, $73 c, $00 c, $83 c, $00 c, $0c c, $00 c, $0d c,
   $00 c, $08 c, $11 c, $1f c, $88 c, $89 c, $00 c, $0e c,
@@ -910,13 +945,13 @@ $00 c, $00 c, $01 c, $33 c,
   $bb c, $bb c, $67 c, $63 c, $6e c, $0e c, $ec c, $cc c,
   $dd c, $dc c, $99 c, $9f c, $bb c, $b9 c, $33 c, $3e c, <b>;</b></span>
 
-<span style="color: #dd0000"><b>: title</b>
+<span style="color: #e6c07b"><b>: title</b>
   $45 c, $58 c, $41 c, $4d c, $50 c, $4c c, $45 c, $00 c,
   $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, $00 c, <b>;</b></span>
 
 $00 c, $c3 c, $50 c, $01 c,
-<span style="color: #0000dd">logo</span>
-<span style="color: #dd0000">title</span>
+<span style="color: #61aeee">logo</span>
+<span style="color: #e6c07b">title</span>
 $00 c, $00 c, $01 c, $33 c,
 
 </pre></section>
@@ -929,8 +964,8 @@ $00 c, $00 c, $01 c, $33 c,
 </ul>
 <h4 id="create-more-words-">Create more words!</h4>
 <pre>
-<b>: INC-A,</b> $3c c, <b>;</b>
-<b>: INC-B,</B> $04 c, <b>;</b>
+<b style="color: #ffffff">: INC-A,</b> $3c c, <b style="color: #ffffff">;</b>
+<b style="color: #ffffff">: INC-B,</B> $04 c, <b style="color: #ffffff">;</b>
 </pre></section>
   </div>
   <div class="slide hidden" id="slide-21">
@@ -941,8 +976,8 @@ $00 c, $00 c, $01 c, $33 c,
 </ul>
 <h4 id="discover-a-pattern-">Discover a pattern?</h4>
 <pre>
-: INC-A, %00<b>111</b>100 c, ;
-: INC-B,</B> %00<b>000</b>100 c, ;
+: INC-A, %00<b style="color: #ffffff">111</b>100 c, ;
+: INC-B,</B> %00<b style="color: #ffffff">000</b>100 c, ;
 </pre></section>
   </div>
   <div class="slide hidden" id="slide-22">
@@ -953,11 +988,11 @@ $00 c, $00 c, $01 c, $33 c,
 </ul>
 <h4 id="factor-out-operands-to-create-full-assembler">Factor out operands to create full assembler</h4>
 <pre>
-<b>: A</b> %00111000 <b>;</b>
-<b>: B</b> %00000000 <b>;</b>
+<b style="color: #ffffff">: A</b> %00111000 <b style="color: #ffffff">;</b>
+<b style="color: #ffffff">: B</b> %00000000 <b style="color: #ffffff">;</b>
 
-<b>: INC,</b>
-  %00000100 or c, <b>;</b>
+<b style="color: #ffffff">: INC,</b>
+  %00000100 or c, <b style="color: #ffffff">;</b>
 </pre>
 
 <ul>
@@ -995,7 +1030,7 @@ a [rSCY] ld,
   <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="macros-for-free-">Macros for free!</h3>
 <pre>
-<span style="color: #0000dd"><b>: reset-scroll</b>
+<span style="color: #61aeee"><b>: reset-scroll</b>
   0 # a ld,
   a [rSCX] ld,
   a [rSCY] ld, <b>;</b></span>
@@ -1006,7 +1041,7 @@ $ffff # sp ld,
 %11100100 # a ld,
 a [rGBP] ld,
 
-<span style="color: #0000dd">reset-scroll</span>
+<span style="color: #61aeee">reset-scroll</span>
 
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
@@ -1014,21 +1049,21 @@ a [rGBP] ld,
   <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="macros-for-free-">Macros for free!</h3>
 <pre>
-<span style="color: #0000dd"><b>: reset-scroll</b>
+<span style="color: #61aeee"><b>: reset-scroll</b>
   0 # a ld,
   a [rSCX] ld,
   a [rSCY] ld, <b>;</b></span>
 
-<span style="color: #dd0000"><b>: reset-palette</b>
+<span style="color: #e6c07b"><b>: reset-palette</b>
   %11100100 # a ld,
   a [rGBP] ld, <b>;</b></span>
 
 di,
 $ffff # sp ld,
 
-<span style="color: #dd0000">reset-palette</span>
+<span style="color: #e6c07b">reset-palette</span>
 
-<span style="color: #0000dd">reset-scroll</span>
+<span style="color: #61aeee">reset-scroll</span>
 
 <span style="color: #99bb99">( ... )</span>
 </pre></section>
