@@ -14,21 +14,26 @@ theme: tkers/cleaver-theme-dmg
 
 --
 
-### Speaker intro
+### 🍒 Who am I?
 
-- David Vázquez Púa ([@davazp](https://github.com/davazp))
-- Tijn Kersjes ([@tkers](https://github.com/tkers))
-
-<img src="imgs/reaktor.png" style="width: auto; background: none; margin-top: 2em" />
-*Reaktor Amsterdam*
+- **Tijn Kersjes**
+- Software consultant at Reaktor
+- (writing a lot of JavaScript)
+- After-hours hacking
 
 --
 
-### After-hours hacking
+### 👨‍💻 Amsterdam Hackers
 
-- Founded _Amsterdam Hackers_
+A group of people in Amsterdam who gather together to appease our curiosity, **learn and have fun** by engaging in **challenging** and interesting projects.
 
-#### First project:
+> A lot of people underestimate their abilities. The best way to learn is not to be afraid to try to solve problems you do not know how to solve yet.
+
+![background](imgs/amshackersgrey.png)
+
+--
+
+### 👨‍💻 Amsterdam Hackers
 
 - Write an emulator?
 - ...a Game Boy game?
@@ -222,8 +227,36 @@ $00 c, $00 c, $01 c, $33 c,
 
 ### Decompiling machine code
 
-- `$3c` is machine code for `INC-A`
-- `$04` is machine code for `INC-B`
+- `$3c` is machine code for `INC A`
+- `$04` is machine code for `INC B`
+
+#### Create more words!
+
+<pre>
+<b>: INC-A,</b> $3c c, <b>;</b>
+<b>: INC-B,</B> $04 c, <b>;</b>
+</pre>
+
+--
+
+### Decompiling machine code
+
+- `$3c` is machine code for `INC A`
+- `$04` is machine code for `INC B`
+
+#### Discover a pattern?
+
+<pre>
+: INC-A, %00<b>111</b>100 c, ;
+: INC-B,</B> %00<b>000</b>100 c, ;
+</pre>
+
+--
+
+### Decompiling machine code
+
+- `$3c` is machine code for `INC A`
+- `$04` is machine code for `INC B`
 
 #### Factor out operands to create full assembler
 
@@ -311,6 +344,12 @@ $ffff # sp ld,
 
 --
 
+### Now what? 🤔
+
+![hello tietokilta](imgs/helloworld.png)
+
+--
+
 ![hello tietokilta](imgs/hellotietokilta.png)
 
 --
@@ -348,10 +387,11 @@ $ffff # sp ld,
 
 --
 
-### Limitations
+### Limitations 💩
 
-- No **run-time** on Game Boy
+- No **run-time** on Game Boy (keyboard?)
 - Division between **ROM** and **RAM**
+- Limited space / banking
 
 --
 
